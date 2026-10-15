@@ -17,7 +17,7 @@ scaler.fit(np.array([
 ]))
 scaler.scale_ = np.array([3.37, 31.97, 19.36, 16.07, 115.24, 7.88, 0.33, 11.76])  # Std dev values
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=os.path.join(BASE_DIR, 'templates'))
 
 
 @app.route('/')
